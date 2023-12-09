@@ -207,17 +207,36 @@ function sanitizeInputNumbers(stringOfNumbers) {
   const splittedGames = stringOfNumbers.split("|");
 
   const winningNumbersString = splittedGames[0].trim().replace(/\s+/g, " ");
-  const winningNumbers = winningNumbersString.split(" ").map(Number);
-
+  const winningNumbers = winningNumbersString
+    .split(" ")
+    .map(Number)
+    .sort((a, b) => a - b);
+  console.log(winningNumbers);
   const currentGameString = splittedGames[1].trim().replace(/\s+/g, " ");
-  const currentGameSet = new Set(currentGameString.split(" ").map(Number));
+  const currentGameSet = new Set(
+    currentGameString
+      .split(" ")
+      .map(Number)
+      .sort((a, b) => a - b)
+  );
   const currentGameNumbers = Array.from(currentGameSet);
+  console.log(currentGameNumbers);
   return { winningNumbers, currentGameNumbers };
 }
 
 function calculateOutcome(repeatsCount) {
-  const outcome = 2 ** repeatsCount;
-  console.log(outcome);
+  if (repeatsCount === 0) {
+    // No match
+    return 0;
+  }
+
+  // Calculate the point value based on the rule
+  let outcome = 1; // Initial point value
+  for (let i = 1; i < repeatsCount; i++) {
+    outcome *= 2; // Double the point value for each subsequent match
+  }
+
+  console.log("Point value:", outcome);
   return outcome;
 }
 
