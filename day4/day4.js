@@ -6,7 +6,7 @@ Card   4: 27 57 62  6 53 68 97 35 23  8 | 23  2 81 62 19  8 65 27 93 53 57 67  6
 Card   5: 49 95 30 21 42 63 92 97 89 93 | 35 34 46 89 93 29 42 21 63 49 77 30 95 27 28 62 72 32 97 54 75 56  4 58 92`.split(
     "\n"
   );
-
+//blabblabla
 const firstString = inputData[0];
 
 function splitString(string) {
