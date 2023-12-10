@@ -1,0 +1,22 @@
+{
+  "name": "advent",
+  "version": "1.0.0",
+  "description": "Advent of Code 2023",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alawllm/advent.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "alawllm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alawllm/advent/issues"
+  },
+  "homepage": "https://github.com/alawllm/advent#readme"
+}
